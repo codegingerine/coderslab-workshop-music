@@ -1,0 +1,203 @@
+/* Adding bootstrap styles not working in additional grid 480px on default*/ 
+@include media-breakpoint-up-ms {
+	.img-responsive {
+		max-width: 100%;
+		height: auto;
+		display: block;
+	}
+}
+
+
+/* ===== NavBar section ===== */
+
+@include media-breakpoint-up-sm {
+	//remove margin-bottom
+	header {
+	  .navbar.navbar-custom {
+	  	margin-bottom: 0;
+		}
+	}	
+}	
+
+/* ===== Slider section ===== */
+
+@include media-breakpoint-up-xs {
+	#mainCarousel {
+		.carousel-caption {
+			text-shadow: none;
+		}
+	}
+}
+
+@include media-breakpoint-up-sm {
+	//mainCarousel custom settings
+	#mainCarousel	{
+		margin-bottom: 30px;
+		//change position of indicators
+		.carousel-indicators {
+			position: absolute;
+			top: 92%;
+		} 
+		.carousel-inner .item {
+			//change caption position
+			.carousel-caption {
+				position: absolute;
+		    	left: 55%;
+				width: 37%;
+				bottom: 8%;
+				text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+				.carousel-descript {
+					//caption min-height
+					min-height: 100px;
+					padding: 5%;
+				}
+			}
+		}
+	}
+}
+
+/* ===== Boxes section ===== */
+@include media-breakpoint-up-xs {
+	//bootstrap class - change from max-width to width to keep equal width of columns on mobile
+	.img-responsive {
+		width: 100%;
+	}
+}	
+
+@include media-breakpoint-up-ms {
+	.boxes {
+		//remove margin below columns
+		div[class^="col-"] {
+			margin-bottom: 0;
+		 }
+		.row {
+			margin-bottom: 20px;
+			//to keep the same column height
+			.img-max-height {
+				max-height: 214px;
+			}
+		}
+	}
+}	
+
+@include media-breakpoint-up-sm {
+	.boxes {
+		// remove margin below columns 
+		.row {
+			margin-bottom: 20px;
+			//to keep the same column height
+			.img-max-height {
+				max-height: 220px;
+			}
+		}
+
+		//boxes animation on ghover
+		.box-wrap {
+			display: block;
+			overflow: hidden;
+			max-height: 220px;
+			width: 100%;
+			img {
+<<<<<<< HEAD
+				@include transition(all 1s ease-in-out);
+			}
+			img:hover  {
+				opacity: 0.85;
+				@include transform(scale(1.3, 1.3));
+=======
+				@include transition(all 0.5s ease-in-out);
+			}
+			img:hover  {
+				opacity: 0.85;
+				@include transform(scale(1.5, 1.5));
+>>>>>>> 19c998c6204583d69381199765e2c4aecc5dad7e
+			}
+		}
+	}
+}	
+
+@include media-breakpoint-up-md { 
+	.boxes {
+		.row {
+			//to keep the same column height
+			.img-max-height {
+				max-height: 293px;
+			}
+		}
+
+		//boxes animation on ghover
+		.box-wrap {
+			display: block;
+			overflow: hidden;
+			max-height: 293px;
+			width: 100%;
+			img {
+<<<<<<< HEAD
+				@include transition(all 1s ease-in-out);
+			}
+			img:hover  {
+				opacity: 0.85;
+				@include transform(scale(1.3, 1.3));
+=======
+				@include transition(all 0.5s ease-in-out);
+			}
+			img:hover  {
+				opacity: 0.85;
+				@include transform(scale(1.5, 1.5));
+>>>>>>> 19c998c6204583d69381199765e2c4aecc5dad7e
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up-lg { 
+	.boxes {
+		.row {
+			//to keep the same column height
+			.img-max-height {
+				max-height: 360px;
+			}
+		}
+	
+		//boxes animation on ghover
+		.box-wrap {
+			display: block;
+			overflow: hidden;
+			max-height: 360px;
+			width: 100%;
+			img {
+<<<<<<< HEAD
+				@include transition(all 1s ease-in-out);
+			}
+			img:hover  {
+				opacity: 0.85;
+				@include transform(scale(1.3, 1.3));
+=======
+				@include transition(all 0.5s ease-in-out);
+			}
+			img:hover  {
+				opacity: 0.85;
+				@include transform(scale(1.5, 1.5));
+>>>>>>> 19c998c6204583d69381199765e2c4aecc5dad7e
+			}
+		}
+	}
+}
+
+/* ===== Footer section ===== */
+
+@include media-breakpoint-up-sm { 
+	footer {
+		hr {
+			margin-top: 10px;
+		}
+		p {
+			text-align: left;
+		}
+		ul {
+			text-align: right;
+		}
+	}
+}
+
+

@@ -1,0 +1,23 @@
+{
+  "name": "start",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "codegingerine <urskosik@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/codegingerine/coderslab-workshop-music",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "1-10-stable": "https://github.com/jquery/download.jqueryui.com/tree/1-10-stable",
+    "bootstrap": "^3.3.7",
+    "jquery-ui": "1.12.0",
+    "font-awesome": "^4.6.3"
+  }
+}

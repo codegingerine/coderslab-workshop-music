@@ -1,0 +1,51 @@
+// ----- Bootstrap breakpoints -----
+
+@mixin media-breakpoint-up-xs {
+	@media screen and (max-width: $breakpoint-max-xs) {
+	 @content;
+	}
+}	
+
+// additional MediumSmall breakpoint
+@mixin media-breakpoint-up-ms {
+	@media screen and (min-width: $breakpoint-min-ms) {
+	 @content;
+	}
+}	
+
+@mixin media-breakpoint-up-sm {
+	@media screen and (min-width: $breakpoint-min-sm) {
+	 @content;
+	}
+}
+
+@mixin media-breakpoint-up-md {
+	@media screen and (min-width: $breakpoint-min-md) {
+	 @content;
+	}
+}	
+
+@mixin media-breakpoint-up-lg {
+	@media screen and (min-width: $breakpoint-min-lg) {
+	 @content;
+	}
+}
+
+
+// mixins for brower prefixes
+
+@mixin transition($properties) {
+	-webkit-transition: $properties;
+	-moz-transition: $properties;
+	-o-transition: $properties;
+	-ms-transition: $properties;
+	transition: $properties;
+}
+
+@mixin transform($properties) {
+	-webkit-transform: $properties;
+	-moz-transform: $properties;
+	-ms-transform: $properties;
+	-o-transform: $properties;
+	transform: $properties;
+}

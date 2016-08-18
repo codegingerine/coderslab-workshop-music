@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Listen to that</title>
+	<!-- bower components -->
+	<link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="./bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="./bower_components/font-awesome/css/font-awesome.css" rel="stylesheet">
+	<link href="./bower_components/jquery-ui/themes/base/jquery-ui.min.css" rel="stylesheet">
+
+<!-- ====================================================== -->
+	<!-- LINKS FOR GH-PAGES (originally bower installed) -->
+<<<<<<< HEAD
+<!-- 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+=======
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+>>>>>>> 19c998c6204583d69381199765e2c4aecc5dad7e
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"> -->
+<!-- ====================================================== -->
+
+	<!-- styles -->
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+			<div class="row">
+				<nav class="navbar navbar-custom navbar-fixed-top navbar-inverse" role="navigation">
+					<div class="container">
+					    <!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+						    <a class="navbar-brand" href="#">
+		   						<img alt="Brand" src="./images/logo_zahlada_bw-sm.png" alt="chocolate" class="img-responsive">
+		  					</a>
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+								<span class="sr-only">Toggle-navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse navbar-right" id="collapse">
+							<ul class="nav navbar-nav">
+								<li class="active"><a href="#">Start</a></li>
+								<li><a href="#">Shop</a></li>
+								<li class="dropdown"><a href="#" data-toggle="dropdown">Muzyka <span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="#">Teledyski</a></li>
+										<li><a href="#">Płyty</a></li>
+										<li><a href="#">Streamy</a></li>
+			            				<li><a href="#">Koncerty</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+	<section class="slider">
+		<div class="container-fluid">
+			<div class="row">	
+				<!-- Bootstrap carousel (customized) -->
+				<div id="mainCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">	
+					<!-- indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#mainCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#mainCarousel" data-slide-to="1"></li>
+						<li data-target="#mainCarousel" data-slide-to="2"></li>
+					</ol>
+					<!-- wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+						<div class="item active">
+							<img src="./images/zah_a_1170x500.jpg" alt="band1">
+							<div class="carousel-caption">
+								<div class="carousel-descript">
+			    					<a href="#">
+				    					<h3>Caption header</h3>
+				    					<p>Caption description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Caption description. Sed ipsum lectus, rutrum sit amet mollis quis, scelerisque.</p>
+			    					</a>
+		  						</div>
+	  						</div>
+						</div>
+						<div class="item">
+							<img src="./images/zah_b_1170x500.jpg" alt="band2">
+							<div class="carousel-caption">
+								<div class="carousel-descript">
+									<a href="#">
+				    					<h3>Caption header 2</h3>
+				    					<p>Caption description. Sed ipsum lectus, rutrum sit amet mollis quis, scelerisque nec ligula. Lorem ipsum dolor sit amet dolor sit amet. </p>
+			    					</a>
+			    				</div>	
+		  					</div>					
+						</div>
+						<div class="item">
+							<img src="./images/zah_c_1170x500.jpg" alt="band3">
+							<div class="carousel-caption">
+								<div class="carousel-descript">
+									<a href="#">
+				    					<h3>Koncert w Warszawie</h3>
+				    					<h4> 12 maja 2016</h4>
+				    					<p> Caption description. Sed ipsum lectus, rutrum sit amet mollis quis, scelerisque nec ligula.</p>
+			    					</a>
+		    					</div>
+		  					</div>					
+						</div>
+					</div>
+					
+					<!-- controls (next prev buttons) -->
+<!-- 					<a class="left carousel-control" href="#mainCarousel" role="button" data-slide="prev">
+						<span class="icon-prev" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#mainCarousel" role="button" data-slide="next">
+						<span class="icon-next" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a> -->
+				</div>
+			</div>
+		</div>		
+	</section>
+
+	<!-- Main section - content boxes -->
+	<section class="boxes">
+		<div class="container">
+			<div class="row">
+				<!-- level 1 -->
+				<div class="col-ms-8 col-sm-8 col-sm-push-4">
+					<div class="box-wrap">
+						<a href="#">
+							<img alt="XXX" src="./images/dzwiek_c3.jpg" class="img-responsive img-max-height">
+							<div class="box-title font-black">
+							<p>dźwięk</p>		
+							</div>
+						</a>	
+					</div>
+				</div>
+				<div class="col-ms-4 col-sm-4 col-sm-pull-8">
+					<div class="box-wrap">
+						<a href="#">
+							<img alt="XXX" src="./images/newsy_c_xs.jpg" class="img-responsive visible-xs-block">
+							<img alt="XXX" src="./images/newsy_c.jpg" class="img-responsive hidden-xs img-max-height">
+							<div class="box-title">
+							<p>newsy</p>
+							</div>
+						</a>
+					</div>			
+				</div>
+			</div>	
+			<div class="row">
+				<!-- level 2 -->
+				<div class="col-ms-4 col-sm-4">
+					<div class="box-wrap">
+						<a href="#">
+							<img alt="XXX" src="./images/obraz_c.jpg" class="img-responsive img-max-height">
+							<div class="box-title font-black">	
+							<p>obraz</p>
+							</div>
+						</a>	
+					</div>
+				</div>
+				<div class="col-ms-4 col-sm-4">
+					<div class="box-wrap">
+						<a href="#">
+							<img alt="XXX" src="./images/koncerty_c_xs.jpg" class="img-responsive visible-xs-block">
+							<img alt="XXX" src="./images/koncerty_c.jpg" class="img-responsive hidden-xs img-max-height">	
+							<div class="box-title">
+							<p>koncerty</p>
+							</div>
+						</a>
+					</div>	
+				</div>
+				<div class="col-ms-4 col-sm-4">
+					<div class="box-wrap">
+						<a href="#">
+							<img alt="XXX" src="./images/zwidy_c_xs.jpg" class="img-responsive visible-xs-block">	
+							<img alt="XXX" src="./images/zwidy_c.jpg" class="img-responsive hidden-xs img-max-height">	
+							<div class="box-title font-black">
+							<p>zwidy</p>	
+							</div>
+						</a>
+					</div>	
+				</div>
+			</div>	
+			<div class="row">
+				<!-- level 3 -->
+				<div class="col-ms-8 col-sm-8">
+					<div class="box-wrap">
+						<a href="#">
+							<img alt="XXX" src="./images/slowa_c3-750x360.jpg" class="img-responsive img-max-height">	
+							<div class="box-title font-black">
+							<p>słowa</p>
+							</div>
+						</a>
+					</div>	
+				</div>
+				<div class="col-ms-4 col-sm-4">
+					<div class="box-wrap">
+						<a href="#">
+							<img alt="XXX" src="./images/video_c3.jpg" class="img-responsive img-max-height">	
+							<div class="box-title font-black">
+							<p>video</p>	
+							</div>
+						</a>
+					</div>	
+				</div>
+			</div>
+		</div>	
+	</section>
+	
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<hr>
+				</div>
+				<!-- social icons -->
+				<div class="col-xs-12 col-sm-6 col-sm-push-6">
+					<ul>
+						<li>
+							<a  href="https://www.facebook.com/Zahlada" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i><span class="sr-only">Facebook</span></a>
+						</li>
+						<li>
+							<a href="mailto:zahlada@zahlada.pl" target="_blank"><span class="glyphicon glyphicon-envelope"></span><span class="sr-only">E-mail</span></a>
+						</li>
+						<li>
+							<a href="https://twitter.com/zahlada" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><span class="sr-only">Twitter</span></a>
+						</li>	
+					</ul>
+				</div>	
+				<!-- copyrights -->
+				<div class="col-xs-12 col-sm-6 col-sm-pull-6">
+					<p>2016 | All rights reserved - Zahlada</p>
+				</div>			
+			</div>			
+		</div>
+	</footer>
+
+	<!-- bower components -->
+	<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="./bower_components/jquery-ui/jquery-ui.min.js"></script>
+	<script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- ====================================================== -->
+	<!-- LINKS FOR GH-PAGES (originally bower installed) -->
+<<<<<<< HEAD
+<!--     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+=======
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+>>>>>>> 19c998c6204583d69381199765e2c4aecc5dad7e
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+<!-- ====================================================== -->	
+
+
+	<!-- project scripts -->
+	<script src="./js/js.js"></script>
+	<script src="./js/jq.js"></script>
+</body>
+
+</html>

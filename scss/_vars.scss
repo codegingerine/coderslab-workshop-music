@@ -1,0 +1,22 @@
+// ----- Bootstrap breakpoints -----
+$breakpoint-max-xs: 767px;
+$breakpoint-min-sm: 768px;
+$breakpoint-max-sm: 991px;
+$breakpoint-min-md: 992px;
+$breakpoint-max-md: 1199px;
+$breakpoint-min-lg: 1200px;
+// additional MediumSmall breakpoint 
+$breakpoint-min-ms: 480px;
+$breakpoint-max-ms: 767px;
+
+// ===== Navbar section ===== 
+
+// Boostrap Default NavBar - custom colors 
+$navbackground: #000000;
+$navcolor: #9d9d9d;
+$activecolor: #ffffff;
+$bghoverfocus: transparent;
+
+// ===== Footer section =====  
+
+$footcolor: #6c6565;
