@@ -1,9 +1,13 @@
-/* Adding bootstrap styles not working in additional grid 480px on default*/ 
+/* Adding bootstrap styles not working in additional MediumSmall grid 480px on default*/ 
 @include media-breakpoint-up-ms {
-	.img-responsive {
-		max-width: 100%;
-		height: auto;
-		display: block;
+	.img-responsive,
+	.thumbnail > img,
+	.thumbnail a > img,
+	.carousel-inner > .item > img,
+	.carousel-inner > .item > a > img {
+	  display: block;
+	  max-width: 100%;
+	  height: auto;
 	}
 }
 
@@ -20,14 +24,6 @@
 }	
 
 /* ===== Slider section ===== */
-
-@include media-breakpoint-up-xs {
-	#mainCarousel {
-		.carousel-caption {
-			text-shadow: none;
-		}
-	}
-}
 
 @include media-breakpoint-up-sm {
 	//mainCarousel custom settings
@@ -57,58 +53,53 @@
 }
 
 /* ===== Boxes section ===== */
-@include media-breakpoint-up-xs {
-	//bootstrap class - change from max-width to width to keep equal width of columns on mobile
-	.img-responsive {
-		width: 100%;
-	}
-}	
 
 @include media-breakpoint-up-ms {
+	//custom settings for additional 480px-757px grid
 	.boxes {
-		//remove margin below columns
-		div[class^="col-"] {
-			margin-bottom: 0;
-		 }
 		.row {
-			margin-bottom: 20px;
-			//to keep the same column height
-			.img-max-height {
-				max-height: 214px;
-			}
-		}
+			margin-left: -10px;
+			margin-right: -10px; 
+			div[class^="col-"] {
+			margin-bottom: 10px;
+			padding-left: 10px;
+			padding-right: 10px;
+			}	
+		} 
 	}
 }	
 
 @include media-breakpoint-up-sm {
 	.boxes {
-		// remove margin below columns 
 		.row {
+			div[class^="col-"] {
 			margin-bottom: 20px;
-			//to keep the same column height
+		 	}
+			//max-width to keep the same column height
 			.img-max-height {
 				max-height: 220px;
 			}
 		}
+	}	
 
-		//boxes animation on ghover
-		.box-wrap {
-			display: block;
-			overflow: hidden;
-			max-height: 220px;
-			width: 100%;
-			img {
-				@include transition(all 1s ease-in-out);
-			}
-			img:hover  {
-				opacity: 0.85;
-				@include transform(scale(1.3, 1.3));
-				@include transition(all 0.5s ease-in-out);
-			}
-			img:hover  {
-				opacity: 0.85;
-				@include transform(scale(1.5, 1.5));
-			}
+	//boxes animation on hover
+	.box-wrap {
+		display: block;
+		overflow: hidden;
+		// max-height to keep animation within img height
+		max-height: 220px;
+		width: 100%;
+		img {
+			@include transition(all 1s ease-in-out);
+		}
+		img:hover  {
+			opacity: 0.85;
+			@include transform(scale(1.3, 1.3));
+			@include transition(all 0.5s ease-in-out);
+		}
+		img:hover  {
+			opacity: 0.85;
+			@include transform(scale(1.5, 1.5));
 		}
 	}
 }	
@@ -122,10 +113,11 @@
 			}
 		}
 
-		//boxes animation on ghover
+		//boxes animation on hover
 		.box-wrap {
 			display: block;
 			overflow: hidden;
+			// max-height to keep animation within img height
 			max-height: 293px;
 			width: 100%;
 			img {
@@ -157,6 +149,7 @@
 		.box-wrap {
 			display: block;
 			overflow: hidden;
+			// max-height to keep animation within img height
 			max-height: 360px;
 			width: 100%;
 			img {

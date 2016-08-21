@@ -13,11 +13,11 @@
 
 <!-- ====================================================== -->
 	<!-- LINKS FOR GH-PAGES (originally bower installed) -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"> -->
 <!-- ====================================================== -->
 
 	<!-- styles -->
@@ -35,7 +35,7 @@
 						    <a class="navbar-brand" href="#">
 		   						<img alt="Brand" src="./images/logo_zahlada_bw-sm.png" alt="chocolate" class="img-responsive">
 		  					</a>
-							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 								<span class="sr-only">Toggle-navigation</span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
@@ -43,11 +43,11 @@
 							</button>
 						</div>
 						<!-- Collect the nav links, forms, and other content for toggling -->
-						<div class="collapse navbar-collapse navbar-right" id="collapse">
-							<ul class="nav navbar-nav">
-								<li class="active"><a href="#">Start</a></li>
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right">
+								<li class="active"><a href="#">Start <span class="sr-only">(current)</span></a></li>
 								<li><a href="#">Shop</a></li>
-								<li class="dropdown"><a href="#" data-toggle="dropdown">Muzyka <span class="caret"></span></a>
+								<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Muzyka <span class="caret"></span></a>
 									<ul class="dropdown-menu">
 										<li><a href="#">Teledyski</a></li>
 										<li><a href="#">Płyty</a></li>
@@ -131,20 +131,21 @@
 		<div class="container">
 			<div class="row">
 				<!-- level 1 -->
-				<div class="col-ms-8 col-sm-8 col-sm-push-4">
+				<div class="col-ms-12 col-sm-8 col-sm-push-4">
 					<div class="box-wrap">
 						<a href="#">
-							<img alt="XXX" src="./images/dzwiek_c3.jpg" class="img-responsive img-max-height">
+							<img alt="XXX" src="./images/dzwiek_c3.jpg" class="img-responsive visible-xs-block img-max-height">
+							<img alt="XXX" src="./images/dzwiek_c3-750x360.jpg" class="img-responsive hidden-xs img-max-height">
 							<div class="box-title font-black">
 							<p>dźwięk</p>		
 							</div>
 						</a>	
 					</div>
 				</div>
-				<div class="col-ms-4 col-sm-4 col-sm-pull-8">
+				<div class="col-ms-6 col-sm-4 col-sm-pull-8">
 					<div class="box-wrap">
 						<a href="#">
-							<img alt="XXX" src="./images/newsy_c_xs.jpg" class="img-responsive visible-xs-block">
+							<img alt="XXX" src="./images/newsy_c_xs.jpg" class="img-responsive visible-xs-block img-max-height">
 							<img alt="XXX" src="./images/newsy_c.jpg" class="img-responsive hidden-xs img-max-height">
 							<div class="box-title">
 							<p>newsy</p>
@@ -152,10 +153,9 @@
 						</a>
 					</div>			
 				</div>
-			</div>	
-			<div class="row">
+
 				<!-- level 2 -->
-				<div class="col-ms-4 col-sm-4">
+				<div class="col-ms-6 col-sm-4">
 					<div class="box-wrap">
 						<a href="#">
 							<img alt="XXX" src="./images/obraz_c.jpg" class="img-responsive img-max-height">
@@ -165,10 +165,10 @@
 						</a>	
 					</div>
 				</div>
-				<div class="col-ms-4 col-sm-4">
+				<div class="col-ms-6 col-sm-4">
 					<div class="box-wrap">
 						<a href="#">
-							<img alt="XXX" src="./images/koncerty_c_xs.jpg" class="img-responsive visible-xs-block">
+							<img alt="XXX" src="./images/koncerty_c_xs.jpg" class="img-responsive visible-xs-block img-max-height">
 							<img alt="XXX" src="./images/koncerty_c.jpg" class="img-responsive hidden-xs img-max-height">	
 							<div class="box-title">
 							<p>koncerty</p>
@@ -176,10 +176,10 @@
 						</a>
 					</div>	
 				</div>
-				<div class="col-ms-4 col-sm-4">
+				<div class="col-ms-6 col-sm-4">
 					<div class="box-wrap">
 						<a href="#">
-							<img alt="XXX" src="./images/zwidy_c_xs.jpg" class="img-responsive visible-xs-block">	
+							<img alt="XXX" src="./images/zwidy_c.jpg" class="img-responsive visible-xs-block img-max-height">	
 							<img alt="XXX" src="./images/zwidy_c.jpg" class="img-responsive hidden-xs img-max-height">	
 							<div class="box-title font-black">
 							<p>zwidy</p>	
@@ -187,20 +187,20 @@
 						</a>
 					</div>	
 				</div>
-			</div>	
-			<div class="row">
+
 				<!-- level 3 -->
-				<div class="col-ms-8 col-sm-8">
+				<div class="col-ms-6 col-sm-8">
 					<div class="box-wrap">
 						<a href="#">
-							<img alt="XXX" src="./images/slowa_c3-750x360.jpg" class="img-responsive img-max-height">	
+							<img alt="XXX" src="./images/slowa_c.jpg" class="img-responsive visible-ms-block img-max-height">
+							<img alt="XXX" src="./images/slowa_c3-750x360.jpg" class="img-responsive img-max-height hidden-ms">	
 							<div class="box-title font-black">
 							<p>słowa</p>
 							</div>
 						</a>
 					</div>	
 				</div>
-				<div class="col-ms-4 col-sm-4">
+				<div class="col-ms-6 col-sm-4">
 					<div class="box-wrap">
 						<a href="#">
 							<img alt="XXX" src="./images/video_c3.jpg" class="img-responsive img-max-height">	
@@ -249,10 +249,10 @@
 
 <!-- ====================================================== -->
 	<!-- LINKS FOR GH-PAGES (originally bower installed) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<!--     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
 <!-- ====================================================== -->	
 
 

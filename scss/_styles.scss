@@ -77,21 +77,21 @@ header {
 
 /* Boostrap Default Carousel - custom settings */
 #mainCarousel {
-	padding-top: 0;
-	.carousel-indicators {
+  padding-top: 0;
+  .carousel-indicators {
     position: relative;
     top: 5px;
-		li {
-			width: 12px;
-			height: 12px;
-			margin: 4px;
-			&:active {
-				width: 12px;
-				height: 12px;
-				margin: 4px;
-			}
-		}	
-	}	
+    li {
+      width: 12px;
+      height: 12px;
+      margin: 4px;
+      &:active {
+        width: 12px;
+        height: 12px;
+        margin: 4px;
+      }
+    } 
+  } 
   .carousel-inner .item {
     img {
       width: 100%;
@@ -103,6 +103,7 @@ header {
       padding-top: 0;
       padding-bottom: 0;
       margin-bottom: -5px;
+      text-shadow: none;
     }
   } 
   //caption styling - extra div wrapping text content
@@ -110,7 +111,7 @@ header {
     background-color: rgba(119, 19, 19, 0.7);
     padding: 2% 5% 0 5%;
     //caption min-height (for mobile, other screens min-height styled through mediaqueries)
-    min-height: 140px;
+    min-height: 145px;
     a {
       text-decoration: none;
       color: #ffffff;
@@ -122,29 +123,33 @@ header {
 /* ===== Boxes section ===== */
 
 .boxes {
-	font-family: 'Reenie Beanie';
-  //margin below columns
-  div[class^="col-"] {
-    margin-bottom: 15px;
-  }
-  a {
-    text-decoration: none;
-  	.box-title {
-  		position: relative;
-  		bottom: 3.7rem;
-  		text-align: right;
-  		color: #ffffff;
-  		font-size: 3.7rem;
-  		line-height: 0;
-  		padding-right: 3.7rem;
-  	}
-    //black color only for boxes with white background
-  	.box-title.font-black {
-  		color: black;
-  	}  
-    img {
+  font-family: 'Reenie Beanie';
+  .row {
+    //margin below columns
+    div[class^="col-"] {
+      margin-bottom: 15px;
+    }
+    //bootstrap class - overwrite width with max-width to keep equal width of columns on mobile
+    .img-responsive {
       width: 100%;
     }
+  }
+
+  a {
+    text-decoration: none;
+    .box-title {
+      position: relative;
+      bottom: 3.7rem;
+      text-align: right;
+      color: #ffffff;
+      font-size: 3.7rem;
+      line-height: 0;
+      padding-right: 3.7rem;
+    }
+    //black color only for boxes with white background
+    .box-title.font-black {
+      color: black;
+    }  
   } 
 }
 
@@ -172,10 +177,10 @@ footer {
           font-size: 3rem;
         }
         .fa.fa-twitter {
-          padding-left: 2rem;
+          padding-left: 24px;
         }
         .fa.fa-facebook-square {
-          padding-right: 2rem;
+          padding-right: 24px;
         }
       }
     }
@@ -184,13 +189,13 @@ footer {
 
 
 // /* ===== Videos section ===== */
-	// #videos {
-	// 	background-color: #d3d1d1;
-	// 	text-align: center;
-	// 		h2 {
-	// 			margin-top: 0;
-	// 		}
-	// }
+  // #videos {
+  //  background-color: #d3d1d1;
+  //  text-align: center;
+  //    h2 {
+  //      margin-top: 0;
+  //    }
+  // }
 
 
 

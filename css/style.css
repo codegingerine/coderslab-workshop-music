@@ -265,11 +265,12 @@ header .navbar.navbar-custom .nav.navbar-nav ul > li {
     right: 0;
     padding-top: 0;
     padding-bottom: 0;
-    margin-bottom: -5px; }
+    margin-bottom: -5px;
+    text-shadow: none; }
   #mainCarousel .carousel-descript {
     background-color: rgba(119, 19, 19, 0.7);
     padding: 2% 5% 0 5%;
-    min-height: 140px; }
+    min-height: 145px; }
     #mainCarousel .carousel-descript a {
       text-decoration: none;
       color: #ffffff; }
@@ -277,8 +278,10 @@ header .navbar.navbar-custom .nav.navbar-nav ul > li {
 /* ===== Boxes section ===== */
 .boxes {
   font-family: 'Reenie Beanie'; }
-  .boxes div[class^="col-"] {
+  .boxes .row div[class^="col-"] {
     margin-bottom: 15px; }
+  .boxes .row .img-responsive {
+    width: 100%; }
   .boxes a {
     text-decoration: none; }
     .boxes a .box-title {
@@ -291,8 +294,6 @@ header .navbar.navbar-custom .nav.navbar-nav ul > li {
       padding-right: 3.7rem; }
     .boxes a .box-title.font-black {
       color: black; }
-    .boxes a img {
-      width: 100%; }
 
 /* ===== Footer section ===== */
 footer hr {
@@ -315,16 +316,20 @@ footer ul {
       footer ul li a .fa, footer ul li a span {
         font-size: 3rem; }
       footer ul li a .fa.fa-twitter {
-        padding-left: 2rem; }
+        padding-left: 24px; }
       footer ul li a .fa.fa-facebook-square {
-        padding-right: 2rem; }
+        padding-right: 24px; }
 
-/* Adding bootstrap styles not working in additional grid 480px on default*/
+/* Adding bootstrap styles not working in additional MediumSmall grid 480px on default*/
 @media screen and (min-width: 480px) {
-  .img-responsive {
+  .img-responsive,
+  .thumbnail > img,
+  .thumbnail a > img,
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    display: block;
     max-width: 100%;
-    height: auto;
-    display: block; } }
+    height: auto; } }
 
 /* ===== NavBar section ===== */
 @media screen and (min-width: 768px) {
@@ -332,10 +337,6 @@ footer ul {
     margin-bottom: 0; } }
 
 /* ===== Slider section ===== */
-@media screen and (max-width: 767px) {
-  #mainCarousel .carousel-caption {
-    text-shadow: none; } }
-
 @media screen and (min-width: 768px) {
   #mainCarousel {
     margin-bottom: 30px; }
@@ -353,35 +354,32 @@ footer ul {
         padding: 5%; } }
 
 /* ===== Boxes section ===== */
-@media screen and (max-width: 767px) {
-  .img-responsive {
-    width: 100%; } }
-
 @media screen and (min-width: 480px) {
-  .boxes div[class^="col-"] {
-    margin-bottom: 0; }
   .boxes .row {
-    margin-bottom: 20px; }
-    .boxes .row .img-max-height {
-      max-height: 214px; } }
+    margin-left: -10px;
+    margin-right: -10px; }
+    .boxes .row div[class^="col-"] {
+      margin-bottom: 10px;
+      padding-left: 10px;
+      padding-right: 10px; } }
 
 @media screen and (min-width: 768px) {
-  .boxes .row {
+  .boxes .row div[class^="col-"] {
     margin-bottom: 20px; }
-    .boxes .row .img-max-height {
-      max-height: 220px; }
-  .boxes .box-wrap {
+  .boxes .row .img-max-height {
+    max-height: 220px; }
+  .box-wrap {
     display: block;
     overflow: hidden;
     max-height: 220px;
     width: 100%; }
-    .boxes .box-wrap img {
+    .box-wrap img {
       -webkit-transition: all 1s ease-in-out;
       -moz-transition: all 1s ease-in-out;
       -o-transition: all 1s ease-in-out;
       -ms-transition: all 1s ease-in-out;
       transition: all 1s ease-in-out; }
-    .boxes .box-wrap img:hover {
+    .box-wrap img:hover {
       opacity: 0.85;
       -webkit-transform: scale(1.3, 1.3);
       -moz-transform: scale(1.3, 1.3);
@@ -393,7 +391,7 @@ footer ul {
       -o-transition: all 0.5s ease-in-out;
       -ms-transition: all 0.5s ease-in-out;
       transition: all 0.5s ease-in-out; }
-    .boxes .box-wrap img:hover {
+    .box-wrap img:hover {
       opacity: 0.85;
       -webkit-transform: scale(1.5, 1.5);
       -moz-transform: scale(1.5, 1.5);

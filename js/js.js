@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 /* ===== NavBar ===== */
 
-	var navbarToggle = document.querySelector(".navbar-custom .navbar-toggle");
+    var navbarToggle = document.querySelector(".navbar-custom .navbar-toggle");
     var dropdownMenu = document.querySelector(".navbar-custom .nav.navbar-nav ul");
     var caret = document.querySelector(".navbar-custom .dropdown span");
     
