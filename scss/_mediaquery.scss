@@ -89,10 +89,10 @@
 		// max-height to keep animation within img height
 		max-height: 220px;
 		width: 100%;
-		img {
+		.box-hover {
 			@include transition(all 0.6s ease-in-out);
 		}
-		img:hover  {
+		.box-hover:hover  {
 			// opacity: 1;
 			@include transform(scale(1.2, 1.2));
 		}
