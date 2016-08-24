@@ -380,7 +380,6 @@ footer ul {
       -ms-transition: all 0.6s ease-in-out;
       transition: all 0.6s ease-in-out; }
     .box-wrap img:hover {
-      opacity: 0.85;
       -webkit-transform: scale(1.2, 1.2);
       -moz-transform: scale(1.2, 1.2);
       -ms-transform: scale(1.2, 1.2);
