@@ -90,16 +90,11 @@
 		max-height: 220px;
 		width: 100%;
 		img {
-			@include transition(all 1s ease-in-out);
+			@include transition(all 0.6s ease-in-out);
 		}
 		img:hover  {
 			opacity: 0.85;
-			@include transform(scale(1.3, 1.3));
-			@include transition(all 0.5s ease-in-out);
-		}
-		img:hover  {
-			opacity: 0.85;
-			@include transform(scale(1.5, 1.5));
+			@include transform(scale(1.2, 1.2));
 		}
 	}
 }	
@@ -112,26 +107,10 @@
 				max-height: 293px;
 			}
 		}
-
-		//boxes animation on hover
+		//boxes animation on hover inherited from sm
 		.box-wrap {
-			display: block;
-			overflow: hidden;
 			// max-height to keep animation within img height
 			max-height: 293px;
-			width: 100%;
-			img {
-				@include transition(all 1s ease-in-out);
-			}
-			img:hover  {
-				opacity: 0.85;
-				@include transform(scale(1.3, 1.3));
-				@include transition(all 0.5s ease-in-out);
-			}
-			img:hover  {
-				opacity: 0.85;
-				@include transform(scale(1.5, 1.5));
-			}
 		}
 	}
 }
@@ -144,26 +123,10 @@
 				max-height: 360px;
 			}
 		}
-	
-		//boxes animation on ghover
+		//boxes animation on hover inherited from sm
 		.box-wrap {
-			display: block;
-			overflow: hidden;
 			// max-height to keep animation within img height
 			max-height: 360px;
-			width: 100%;
-			img {
-				@include transition(all 1s ease-in-out);
-			}
-			img:hover  {
-				opacity: 0.85;
-				@include transform(scale(1.3, 1.3));
-				@include transition(all 0.5s ease-in-out);
-			}
-			img:hover  {
-				opacity: 0.85;
-				@include transform(scale(1.5, 1.5));
-			}
 		}
 	}
 }
