@@ -15,62 +15,52 @@
 /* Boostrap default NavBar - custom settings */
 header {
   min-height: 60px;
-  .navbar.navbar-custom {
+  .navbar-main {
     min-height: 60px;
-    background-image: none;
     background-color: $navbackground;
-    border: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    //  logo 
     .navbar-brand {
       min-height: 60px;
       padding-top: 0;
     }
-    .navbar-toggle {
-      margin-top: 12px;
-      margin-right: 30px;
+    // toggle button
+    .navbar-toggler {
+      color: #ffffff;
+      font-size: 1.4rem;
+      border: 1px solid #333;
+      padding: .2rem .55rem .35rem .55rem;
+      margin-top: 13px;
     }
-    // content for toggling styled
-    .collapse.navbar-collapse {
-      margin-top: 7px;
+    .navbar-toggler:hover {
+      background-color: #333;
     }
-    .navbar-nav {
-      > .active {
-        > a, > a:hover, > a:focus {
-          background-color: $bghoverfocus;
-          background-image: none;
-          box-shadow: none;
-          }
-      }
-      .dropdown-menu {
-        background-image: none;
-        background-color: $navbackground;
-        > li > a {
-          color: $navcolor;
-          &:hover,  &:focus {
-            background-color: $bghoverfocus;
-            background-image: none;
-            color: $activecolor;
-          }
-        } 
+    // main nav links
+    .nav-item {
+      > a:hover, > a:focus {
+        color: $activecolor;
       }
     }
-  }
-}
-
-// Expanded dropdown menu on mobile screens ('dropdown-menu' class removed in JS)
-header {
-    .navbar.navbar-custom {
-      .nav.navbar-nav ul {
-        > li {
-          list-style-type: none;
-          padding-top: 5px;
-          padding-bottom: 5px;
-          > a {
-            text-decoration: none;
-            color: $navcolor;
-          }
+    // dropdown menu 
+    .dropdown-menu {
+      background-image: none;
+      background-color: $navbackground;
+    }
+    .dropdown-item {
+      background-color: $bghoverfocus;
+      background-image: none;
+      list-style-type: none;
+      > a {
+        color: $navcolor;
+        text-decoration: none;
+        color: $navcolor;
+        &:hover,  &:focus {
+          color: $activecolor;
         }
-      }
-    }
+      }    
+    } 
+  }
 }
 
 /* ===== Slider section ===== */
@@ -78,21 +68,23 @@ header {
 /* Boostrap Default Carousel - custom settings */
 #mainCarousel {
   padding-top: 0;
+  // indicators styled
   .carousel-indicators {
     position: relative;
-    top: 5px;
+    top: .3rem;
     li {
-      width: 12px;
-      height: 12px;
-      margin: 4px;
+      width: .8rem;
+      height: .8rem;
+      margin: .3rem;
       &:active {
-        width: 12px;
-        height: 12px;
-        margin: 4px;
+        width: .8rem;
+        height: .8rem;
+        margin: .3rem;
       }
     } 
   } 
-  .carousel-inner .item {
+  // carousel items styled
+  .carousel-inner .carousel-item {
     img {
       width: 100%;
     }
@@ -105,52 +97,52 @@ header {
       margin-bottom: -5px;
       text-shadow: none;
     }
-  } 
-  //caption styling - extra div wrapping text content
-  .carousel-descript {
-    background-color: rgba(119, 19, 19, 0.7);
-    padding: 2% 5% 0 5%;
-    //caption min-height (for mobile, other screens min-height styled through mediaqueries)
-    min-height: 145px;
-    a {
-      text-decoration: none;
-      color: #ffffff;
+    //caption styling -  div wrapping text content inside carousel-captions
+    .carousel-descript {
+      background-color: rgba(119, 19, 19, 0.7);
+      padding: 5% 5% 0 5%;
+      //caption min-height (min-height for larger screens styled through mediaqueries)
+      min-height: 145px;
+      a {
+        text-decoration: none;
+        color: #ffffff;
+      }
     }
-  }
+  } 
 }
-
 
 /* ===== Boxes section ===== */
 
 .boxes {
   font-family: 'Reenie Beanie';
-  .row {
-    //margin below columns
-    div[class^="col-"] {
-      margin-bottom: 15px;
-    }
-    //bootstrap class - overwrite width with max-width to keep equal width of columns on mobile
-    .img-responsive {
-      width: 100%;
+  // margin below columns
+  div[class^="col-"] {
+    margin-bottom: 10px;
+  }
+  .box-wrap {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    a {
+      text-decoration: none;
+      img {
+        width: 100%;
+      }
+      .box-title {
+        position: relative;
+        bottom: 2.2rem;
+        font-size: 2.2rem;
+        padding-right: 2.2rem;
+        text-align: right;
+        color: #ffffff;
+        line-height: 0;
+      }
+      //black color only for boxes with white background
+      .box-title.font-black {
+        color: #000000;
+      }  
     }
   }
-
-  a {
-    text-decoration: none;
-    .box-title {
-      position: relative;
-      bottom: 3.7rem;
-      text-align: right;
-      color: #ffffff;
-      font-size: 3.7rem;
-      line-height: 0;
-      padding-right: 3.7rem;
-    }
-    //black color only for boxes with white background
-    .box-title.font-black {
-      color: black;
-    }  
-  } 
 }
 
 /* ===== Footer section ===== */
@@ -160,7 +152,6 @@ footer {
     border-color: $footcolor;
   }
   p {
-    line-height: 3;
     color: $footcolor;
     text-align: center;
   }
@@ -174,7 +165,7 @@ footer {
         text-decoration: none;
         color: $footcolor; 
         .fa, span {
-          font-size: 3rem;
+          font-size: 2rem;
         }
         .fa.fa-twitter {
           padding-left: 24px;
@@ -182,20 +173,13 @@ footer {
         .fa.fa-facebook-square {
           padding-right: 24px;
         }
+        .fa:hover {
+          color: #ffffff;
+        }
       }
     }
   }
 }
-
-
-// /* ===== Videos section ===== */
-  // #videos {
-  //  background-color: #d3d1d1;
-  //  text-align: center;
-  //    h2 {
-  //      margin-top: 0;
-  //    }
-  // }
 
 
 

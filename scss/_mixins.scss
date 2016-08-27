@@ -6,13 +6,6 @@
 	}
 }	
 
-// additional MediumSmall breakpoint
-@mixin media-breakpoint-up-ms {
-	@media screen and (min-width: $breakpoint-min-ms) {
-	 @content;
-	}
-}	
-
 @mixin media-breakpoint-up-sm {
 	@media screen and (min-width: $breakpoint-min-sm) {
 	 @content;
@@ -27,6 +20,12 @@
 
 @mixin media-breakpoint-up-lg {
 	@media screen and (min-width: $breakpoint-min-lg) {
+	 @content;
+	}
+}
+
+@mixin media-breakpoint-up-xl {
+	@media screen and (min-width: $breakpoint-min-xl) {
 	 @content;
 	}
 }

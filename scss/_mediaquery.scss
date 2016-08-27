@@ -1,31 +1,38 @@
-/* Adding bootstrap styles not working in additional MediumSmall grid 480px on default*/ 
-@include media-breakpoint-up-ms {
-	.img-responsive,
-	.thumbnail > img,
-	.thumbnail a > img,
-	.carousel-inner > .item > img,
-	.carousel-inner > .item > a > img {
-	  display: block;
-	  max-width: 100%;
-	  height: auto;
-	}
-}
-
-
 /* ===== NavBar section ===== */
 
-@include media-breakpoint-up-sm {
-	//remove margin-bottom
+@include media-breakpoint-up-xs {
 	header {
-	  .navbar.navbar-custom {
-	  	margin-bottom: 0;
+		// to enable pull-xs-left for navbar to place it below logo
+		#mainCollapsingNavbar {
+		width: 100%;
+		}	
+	}	
+}	
+@include media-breakpoint-up-sm {
+	header {
+		// to enable pull-xs-left for navbar to place it below logo
+		#mainCollapsingNavbar {
+			width: 100%;
+		}	
+	}	
+}	
+
+@include media-breakpoint-up-md {
+	header {
+		// to center links vertically
+		.nav-link {
+			line-height: 2.6;
 		}
+		// to enable pull-md-right for navbar in the same line with logo
+		#mainCollapsingNavbar {
+			width: 70%;
+		}	
 	}	
 }	
 
 /* ===== Slider section ===== */
 
-@include media-breakpoint-up-sm {
+@include media-breakpoint-up-md {
 	//mainCarousel custom settings
 	#mainCarousel	{
 		margin-bottom: 30px;
@@ -34,19 +41,20 @@
 			position: absolute;
 			top: 92%;
 		} 
-		.carousel-inner .item {
+		// carousel items styled
+		.carousel-inner .carousel-item {
 			//change caption position
 			.carousel-caption {
 				position: absolute;
-		    	left: 55%;
+				left: 55%;
 				width: 37%;
 				bottom: 8%;
 				text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
-				.carousel-descript {
-					//caption min-height
-					min-height: 100px;
-					padding: 5%;
-				}
+			}
+			.carousel-descript {
+				//caption min-height
+				min-height: 100px;
+				padding: 5%;
 			}
 		}
 	}
@@ -54,92 +62,89 @@
 
 /* ===== Boxes section ===== */
 
-@include media-breakpoint-up-ms {
-	//custom settings for additional 480px-757px grid
-	.boxes {
-		.row {
-			margin-left: -10px;
-			margin-right: -10px; 
-			div[class^="col-"] {
-			margin-bottom: 10px;
-			padding-left: 10px;
-			padding-right: 10px;
-			}	
-		} 
-	}
-}	
-
 @include media-breakpoint-up-sm {
 	.boxes {
-		.row {
-			div[class^="col-"] {
-			margin-bottom: 20px;
-		 	}
-			//max-width to keep the same column height
-			.img-max-height {
-				max-height: 220px;
-			}
+		//side padding & margin below columns
+		div[class^="col-"] {
+			padding-left: 8px;
+			padding-right: 8px;
+			margin-bottom: 16px;
 		}
-	}	
-
-	//boxes animation on hover
-	.box-wrap {
-		display: block;
-		overflow: hidden;
-		// max-height to keep animation within img height
-		max-height: 220px;
-		width: 100%;
-		.box-hover {
-			@include transition(all 0.6s ease-in-out);
-		}
-		.box-hover:hover  {
-			// opacity: 1;
-			@include transform(scale(1.2, 1.2));
-		}
-	}
-}	
-
-@include media-breakpoint-up-md { 
-	.boxes {
-		.row {
-			//to keep the same column height
-			.img-max-height {
-				max-height: 293px;
-			}
-		}
-		//boxes animation on hover inherited from sm
 		.box-wrap {
-			// max-height to keep animation within img height
-			max-height: 293px;
+			//max-height to keep the same img height in a row
+			max-height: 172px; 
+			img {
+				//max-height to keep the same img height in a row
+				max-height: 172px;
+			}
 		}
 	}
 }
 
-@include media-breakpoint-up-lg { 
+@include media-breakpoint-up-md {
 	.boxes {
-		.row {
-			//to keep the same column height
-			.img-max-height {
-				max-height: 360px;
+		div[class^="col-"] {
+			padding-left: 10px;
+			padding-right: 10px;
+			margin-bottom: 10px;
+		}
+		//margin below columns
+		div[class^="col-"] {
+			margin-bottom: 20px;
+		}
+		.box-wrap {
+			//max-height to keep the same img height in a row
+			max-height: 210px; 
+			img {
+				//max-height to keep the same img height in a row
+				max-height: 210px;
+			}
+			.box-anime {
+				@include transition(all 0.6s ease-in-out);
+			}
+			.box-anime:hover  {
+				@include transform(scale(1.2, 1.2));
 			}
 		}
-		//boxes animation on hover inherited from sm
+	}
+}
+
+@include media-breakpoint-up-lg {
+	.boxes {
 		.box-wrap {
-			// max-height to keep animation within img height
-			max-height: 360px;
+			//max-height to keep the same img height in a row
+			max-height: 283px; 
+			img {
+				//max-height to keep the same img height in a row
+				max-height: 283px;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up-xl {
+	.boxes {
+		.box-wrap {
+			//max-height to keep the same img height in a row
+			max-height: 350px; 
+			img {
+				//max-height to keep the same img height in a row
+				max-height: 350px;
+			}
 		}
 	}
 }
 
 /* ===== Footer section ===== */
 
-@include media-breakpoint-up-sm { 
+@include media-breakpoint-up-md { 
 	footer {
 		hr {
 			margin-top: 10px;
 		}
 		p {
 			text-align: left;
+			line-height: 3;
 		}
 		ul {
 			text-align: right;

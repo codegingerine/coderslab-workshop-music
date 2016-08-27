@@ -1,7 +1,7 @@
 # coderslab-workshop-music
 
 RWD Project: 
-Bootstrap, HTML, CSS, Gulp, Sass, media queries, JS
+Bootstrap 4, HTML, CSS, Gulp, Sass, media queries, JS
 
 ## Link
 
