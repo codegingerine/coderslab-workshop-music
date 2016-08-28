@@ -68,6 +68,7 @@ header {
 /* Boostrap Default Carousel - custom settings */
 #mainCarousel {
   padding-top: 0;
+  border-bottom: 10px solid #080808;
   // indicators styled
   .carousel-indicators {
     position: relative;
@@ -99,6 +100,7 @@ header {
     }
     //caption styling -  div wrapping text content inside carousel-captions
     .carousel-descript {
+      background-color: #771313; //fallback
       background-color: rgba(119, 19, 19, 0.7);
       padding: 5% 5% 0 5%;
       //caption min-height (min-height for larger screens styled through mediaqueries)
@@ -130,8 +132,8 @@ header {
       }
       .box-title {
         position: relative;
-        bottom: 2.2rem;
-        font-size: 2.2rem;
+        bottom: 2.3rem;
+        font-size: 2.3rem;
         padding-right: 2.2rem;
         text-align: right;
         color: #ffffff;

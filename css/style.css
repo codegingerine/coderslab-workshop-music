@@ -58,7 +58,8 @@ header {
 /* ===== Slider section ===== */
 /* Boostrap Default Carousel - custom settings */
 #mainCarousel {
-  padding-top: 0; }
+  padding-top: 0;
+  border-bottom: 10px solid #080808; }
   #mainCarousel .carousel-indicators {
     position: relative;
     top: .3rem; }
@@ -81,6 +82,7 @@ header {
     margin-bottom: -5px;
     text-shadow: none; }
   #mainCarousel .carousel-inner .carousel-item .carousel-descript {
+    background-color: #771313;
     background-color: rgba(119, 19, 19, 0.7);
     padding: 5% 5% 0 5%;
     min-height: 145px; }
@@ -103,8 +105,8 @@ header {
         width: 100%; }
       .boxes .box-wrap a .box-title {
         position: relative;
-        bottom: 2.2rem;
-        font-size: 2.2rem;
+        bottom: 2.3rem;
+        font-size: 2.3rem;
         padding-right: 2.2rem;
         text-align: right;
         color: #ffffff;
