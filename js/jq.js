@@ -3,8 +3,8 @@ $(document).ready(function(){
 /* ===== Boxes section ===== */
 
 /*
-- display animated gif on hover on bigger screens by changing url kept in data attributes
-- display static jpg on small screens
+- Display animated gif on hover on bigger screens by changing src path kept in data attributes
+- Display static jpg on small screens by changing src path kept in data attributes
 */ 
 if (window.matchMedia("(min-width: 768px)").matches) {
 	$(function(){
@@ -17,6 +17,7 @@ if (window.matchMedia("(min-width: 768px)").matches) {
 		);
 	});
 };
+
 
 });
 
