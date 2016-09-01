@@ -77,6 +77,10 @@
 				//max-height to keep the same img height in a row
 				max-height: 172px;
 			}
+			a .box-title {
+				bottom: 1.5rem;
+				right: 1.5rem;
+			}
 		}
 	}
 }
@@ -99,12 +103,16 @@
 				//max-height to keep the same img height in a row
 				max-height: 210px;
 			}
-			.box-anime {
+			a .box-title {
+				bottom: 1.6rem;
+				right: 1.6rem;
+			}
+			.box-anime-scale {
 				@include transition(all 0.6s ease-in-out);
 			}
-			.box-anime:hover  {
+			.box-anime-scale:hover  {
 				@include transform(scale(1.2, 1.2));
-			}
+			} 
 		}
 	}
 }
@@ -118,6 +126,18 @@
 				//max-height to keep the same img height in a row
 				max-height: 283px;
 			}
+			a .box-title {
+				bottom: 2.3rem;
+				right: 2.3rem;
+			}
+			.opacity {
+				opacity: .4;
+				filter: alpha(opacity=40);
+			} 	
+			//color for all boxes with opacity  		
+			a .box-font-anime {
+				color: #ffffff;
+			} 
 		}
 	}
 }

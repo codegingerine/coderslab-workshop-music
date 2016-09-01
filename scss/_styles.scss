@@ -104,10 +104,16 @@ header {
       background-color: rgba(119, 19, 19, 0.7);
       padding: 5% 5% 0 5%;
       //caption min-height (min-height for larger screens styled through mediaqueries)
-      min-height: 145px;
+      min-height: 150px;
       a {
         text-decoration: none;
         color: #ffffff;
+      }
+      h3 {
+        font-size: 1.5rem;
+      }
+      h4 {
+      font-size: 1.2rem;
       }
     }
   } 
@@ -132,15 +138,15 @@ header {
       }
       .box-title {
         position: relative;
-        bottom: 2.3rem;
         font-size: 2.3rem;
-        padding-right: 2.2rem;
+        bottom: 2.3rem;
+        right: 2.3rem;
         text-align: right;
         color: #ffffff;
         line-height: 0;
       }
-      //black color only for boxes with white background
-      .box-title.font-black {
+      //color dark only for boxes with white background
+      .box-font-dark {
         color: #000000;
       }  
     }
