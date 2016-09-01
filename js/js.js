@@ -20,30 +20,35 @@ document.addEventListener("DOMContentLoaded", function() {
      };  
     DropdownMobile()     
 
+    /*
+    - Display animated gif on hover on bigger screens by changing src path kept in data attributes
+    - Display static jpg on small screens by changing src path kept in data attributes
+    */ 
+    var boxIMG = document.querySelectorAll(".boxes .box-wrap img")
 
-
-// if (window.matchMedia("(min-width: 768px)").matches) {
-//     $(function(){
-//         $('.boxes .box-wrap img').hover(
-//           function() {
-//             $(this).attr('src', $(this).attr('data-anime'));
-//           }, function() {
-//             $(this).attr('src', $(this).attr('data-static'));
-//           }
-//         );
-//     });
-// };
-
-
-
-    
+    function gifAnimate() {
+        if (window.matchMedia("screen and (min-width: 768px)").matches) {
+            for (var i=0; i<boxIMG.length; i++) {
+                boxIMG[i].addEventListener("mouseover", function(event) {
+                    if (this.hasAttribute('data-anime') === true) {
+                        this.setAttribute('src', this.dataset.anime);
+                    };
+                });
+                boxIMG[i].addEventListener("mouseout", function(event) {
+                    if (this.hasAttribute('data-static') === true) {
+                        this.setAttribute('src', this.dataset.static);
+                    };
+                });        
+            };
+        };
+     };  
+    gifAnimate()    
 
     /* Boxes section
     - remove opacity on mouseover, change font color
     - add opacity on mouseout, change font color
     */
     var boxWrap = document.querySelectorAll(".boxes .box-wrap")
-    var boxIMG = document.querySelectorAll(".boxes .box-wrap img")
 
     function BoxesOpacity() {
         // if (window.matchMedia("screen and (min-width: 768px)").matches) {
