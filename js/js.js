@@ -20,15 +20,33 @@ document.addEventListener("DOMContentLoaded", function() {
      };  
     DropdownMobile()     
 
+
+
+// if (window.matchMedia("(min-width: 768px)").matches) {
+//     $(function(){
+//         $('.boxes .box-wrap img').hover(
+//           function() {
+//             $(this).attr('src', $(this).attr('data-anime'));
+//           }, function() {
+//             $(this).attr('src', $(this).attr('data-static'));
+//           }
+//         );
+//     });
+// };
+
+
+
+    
+
     /* Boxes section
-    - remove opacity on mouseover
-    - add opacity on mouseout 
+    - remove opacity on mouseover, change font color
+    - add opacity on mouseout, change font color
     */
     var boxWrap = document.querySelectorAll(".boxes .box-wrap")
     var boxIMG = document.querySelectorAll(".boxes .box-wrap img")
 
     function BoxesOpacity() {
-        if (window.matchMedia("screen and (min-width: 768px)").matches) {
+        // if (window.matchMedia("screen and (min-width: 768px)").matches) {
             for (var i=0; i<boxWrap.length; i++) {
                 boxWrap[i].addEventListener("mouseover", function(event) {
                     this.firstElementChild.firstElementChild.classList.remove("opacity");
@@ -39,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     this.firstElementChild.firstElementChild.nextElementSibling.classList.add("box-font-anime");                    
                 });
             };
-        };
+        // };
      };  
     BoxesOpacity()   
 

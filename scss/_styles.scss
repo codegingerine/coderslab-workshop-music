@@ -104,7 +104,7 @@ header {
       background-color: rgba(119, 19, 19, 0.7);
       padding: 5% 5% 0 5%;
       //caption min-height (min-height for larger screens styled through mediaqueries)
-      min-height: 150px;
+      min-height: 160px;
       a {
         text-decoration: none;
         color: #ffffff;
@@ -150,6 +150,14 @@ header {
         color: #000000;
       }  
     }
+    .opacity {
+      opacity: .4;
+      filter: alpha(opacity=40);
+    }   
+    //color for all boxes with opacity      
+    a .box-font-anime {
+      color: #ffffff;
+    } 
   }
 }
 

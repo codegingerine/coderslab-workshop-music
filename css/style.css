@@ -84,7 +84,7 @@ header {
     background-color: #771313;
     background-color: rgba(119, 19, 19, 0.7);
     padding: 5% 5% 0 5%;
-    min-height: 150px; }
+    min-height: 160px; }
     #mainCarousel .carousel-inner .carousel-item .carousel-descript a {
       text-decoration: none;
       color: #ffffff; }
@@ -116,6 +116,11 @@ header {
         line-height: 0; }
       .boxes .box-wrap a .box-font-dark {
         color: #000000; }
+    .boxes .box-wrap .opacity {
+      opacity: .4;
+      filter: alpha(opacity=40); }
+    .boxes .box-wrap a .box-font-anime {
+      color: #ffffff; }
 
 /* ===== Footer section ===== */
 footer hr {
@@ -222,12 +227,7 @@ footer ul {
       max-height: 283px; }
     .boxes .box-wrap a .box-title {
       bottom: 2.3rem;
-      right: 2.3rem; }
-    .boxes .box-wrap .opacity {
-      opacity: .4;
-      filter: alpha(opacity=40); }
-    .boxes .box-wrap a .box-font-anime {
-      color: #ffffff; } }
+      right: 2.3rem; } }
 
 @media screen and (min-width: 1200px) {
   .boxes .box-wrap {
